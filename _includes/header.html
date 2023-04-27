@@ -1,0 +1,16 @@
+<div class="header">
+	<div class="inner_header">
+		<div class="logo_container">
+		<h1>MY<span>BLOG</span></h1>
+		</div>
+		<ul class="navigation">
+			<!-- Iterates to the list of pages (all .md files in root folder) and filters them to get only
+			pages with the categorie navigation_item and creates links for each page as navigation bar.-->
+			{% assign pages = site.pages | where_exp: "page", "page.categories == 'navigation_item'" %}
+			{% for page in pages %}
+			<a href="{{ site.baseurl }}{{ page.url }}"><li>{{ page.title }}</li></a>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+
