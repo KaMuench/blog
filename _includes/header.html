@@ -6,10 +6,11 @@
 		<ul class="navigation">
 			<!-- Iterates to the list of pages (all .md files in root folder) and filters them to get only
 			pages with the categorie navigation_item and creates links for each page as navigation bar.-->
-			{% assign pages = site.pages | where_exp: "page", "page.categories == 'navigation_item'" %}
-			{% for page in pages %}
-			<a href="{{ site.baseurl }}{{ page.url }}"><li>{{ page.title }}</li></a>
-			{% endfor %}
+			
+			<a href="{{ site.baseurl }}/"><li>Home</li></a>	
+			<a href="{{ site.baseurl }}{{ site.posts[0].url }}"><li>Blog</li></a>
+			<a href="{{ site.baseurl }}/projects"><li>Projects</li></a>
+			
 		</ul>
 	</div>
 </div>
