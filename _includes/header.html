@@ -1,17 +1,25 @@
-<div class="header">
-	<div class="inner_header">
-		<div class="logo_container">
-		<h1>MY<span>BLOG</span></h1>
-		</div>
-		<ul class="navigation">
-			<!-- Iterates to the list of pages (all .md files in root folder) and filters them to get only
-			pages with the categorie navigation_item and creates links for each page as navigation bar.-->
-			
-			<a href="{{ site.baseurl }}/"><li>Home</li></a>	
-			<a href="{{ site.baseurl }}{{ site.posts[0].url }}"><li>Blog</li></a>
-			<a href="{{ site.baseurl }}/projects"><li>Projects</li></a>
-			
-		</ul>
-	</div>
-</div>
+<header class="site-header" role="banner">
 
+  <div class="wrapper">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    <div class="site-logo-container">
+      <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+        <h1>MY<span>BLOG</span><h1>
+      </a>
+    </div>
+
+    {%- if page_paths -%}
+      <nav class="site-nav">
+        <div class="site-nav-list">
+          {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </nav>
+    {%- endif -%}
+  </div>
+</header>
