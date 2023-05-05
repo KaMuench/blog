@@ -1,0 +1,7 @@
+{%- if page.title == "Projects" -%}
+    <ul class="list">
+        {%- for bl in site.posts -%}
+            <li>{{ bl.title }}</li>
+        {%- endfor -%}
+    </ul>
+{%- endif -%}

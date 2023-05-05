@@ -1,7 +1,7 @@
 /**
  * Site header
  */
-/* #endregion*/
+/* #region*/
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
@@ -14,18 +14,20 @@
 
 .site-title {
   @include relative-font-size(2.5);
-  line-height: $base-line-height * $base-font-size * 2.25 ;
+  line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
   float: left;
   display: table;
 
   p {
+    font-family: Kanit;
     color: white;
     display: table-cell;
-    font-weight: 200;
+    font-weight: 400;
   }
 
   p span {
+    font-family: Kanit;
     color: $primary-color;
     font-weight: 800;
     /*text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;*/
@@ -79,10 +81,6 @@
     position: absolute;
     top: 9px;
     right: calc($spacing-unit / 2);
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
-    text-align: right;
 
     label[for="nav-trigger"] {
       display: block;
@@ -90,6 +88,7 @@
       width: 36px;
       height: 36px;
       z-index: 2;
+      background-color: $primary-color;
       cursor: pointer;
     }
 
@@ -101,9 +100,18 @@
       line-height: 0;
       padding-top: 10px;
       text-align: center;
+      border-radius: $corner-rad-std;
 
       >svg {
-        fill: $grey-color-dark;
+        fill: $grey-color-light;
+      }
+
+      &:hover {
+        background-color: $secondary-color;
+
+        >svg {
+          fill: $grey-color-dark;
+        }
       }
     }
 
@@ -112,22 +120,41 @@
       display: none;
     }
 
-    input:checked~.trigger {
-      display: block;
-      padding-bottom: 5px;
+    input:checked {
+      ~.trigger {
+        position: relative;
+        top: 12px;
+        display: block;
+        padding: 10px;
+        border-color: $grey-color-dark;
+        border-width: 2px;
+        border-radius: $corner-rad-std;
+        background-color: $grey-color-light;
+        z-index: 3;
+      }
+
+      ~label[for="nav-trigger"] .menu-icon {
+        background-color: $secondary-color;
+
+        >svg {
+          fill: $grey-color-dark;
+        }
+      }
     }
 
     .page-link {
       display: block;
-      padding: 5px 10px;
+      color: $grey-color-dark;
 
+      // Gaps between nav items, but not on the last one
       &:not(:last-child) {
-        margin-right: 0;
+        margin-right: 0px;
       }
-
-      margin-left: 20px;
     }
   }
+
+  @include media-query($on-palm) {}
+
 }
 
 /* #endregion*/
@@ -213,8 +240,11 @@
  */
 /* #region*/
 .page-content {
-  padding: $spacing-unit 0;
   flex: 1;
+
+  @include media-query($on-bgrnd-dissap) {
+    background-color: $grey-color-light;
+  }
 }
 
 .page-heading {
@@ -291,6 +321,43 @@
       @include relative-font-size(1.125);
     }
   }
+}
+
+/* #endregion*/
+
+/** 
+ * List
+ */
+/* #region*/
+.list {
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+}
+
+.item-title {
+  font-weight: 600;
+}
+
+.item-desc {
+  font-size: larg;
+  line-height: 95%;
+}
+
+.item-meta {
+  font-size: medium;
+}
+
+.post-link {
+
+  &:visited{
+    color: $grey-color-dark	;
+  }
+  
+}
+
+.list-item-img {
+  float: right;
 }
 
 /* #endregion*/

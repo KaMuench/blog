@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{%- include page_description.html -%}
+{{ content }}
+
+{%- if site.posts.size > 0 -%}
+<ul class="list">
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    {%- for post in site.posts -%}
+    <li class="list-item">
+        <a class="post-link" href="{{ post.url | relative_url }}">
+        <div class="list-item-desc">
+            <h3 class="item-title">{{ post.title | escape }}</h3>
+            <p class="item-desc"> {{ post.description | escape }}</p>
+            <div class="item-meta">
+                <span class="list-item-desc-author"> {{post.author | default: "Kaleb Münch"}}</span>
+                <span class="list-item-desc-date">{{ post.date | date: date_format }}</span>
+            </div>
+        </div>
+        <div class="list-item-img">
+            <img src="">
+        </div>
+        </a>
+        {%- if site.show_excerpts -%}
+        {{ post.excerpt }}
+        {%- endif -%}
+    </li>
+    {%- endfor -%}
+</ul>
+
+{%- endif -%}
