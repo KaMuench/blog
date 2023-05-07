@@ -3,7 +3,8 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2023-04-27 11:40:38 +020
 description: > 
- Just a quick overview about jekyll. It is a neat tool for building static websites. Event if it takes some time to get into using it though.
+ Just a quick overview of jekyll. It is a neat tool for building static websites to display your blog posts or projects. Even if it takes some time to get into using, its quite conveniant. And at the end the effort is worth the pain ;). Try for your self and see!
+
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
