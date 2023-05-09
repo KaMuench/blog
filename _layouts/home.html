@@ -6,5 +6,10 @@ layout: default
   {%- include page_description.html -%}
   {{ content }}
 
-
+  <div class="exhibit-wrapper">
+    <h3>Some Blog Posts</h3>
+    {%- include list.html list = site.posts -%}
+    <h3>Some Projects</h3>
+    {%- include list.html list = site.projects -%}
+  </div>
 </div>

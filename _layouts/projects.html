@@ -2,5 +2,7 @@
 layout: default
 ---
 
-{%- include list.html -%}
+{%- include page_description.html -%}
 {{ content }}
+
+{%- include list.html list = site.projects -%}

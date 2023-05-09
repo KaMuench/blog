@@ -334,91 +334,99 @@
 }
 
 .list-item {
-  padding: 10px;
-  background-color: $primary-color;
-  transition: transform 0.5s;
-  border-radius: $corner-rad-std;
+  margin: $spacing-unit;
 
-  &:hover {
-    transform: scale(1.05);
-    z-index: 50;
-    background-color: $secondary-color;
-    box-shadow: 0 5px 25px rgba(0,0,0,.2);
-  }
+  .list-item-wrapper {
+    padding: 20px;
+    background-color: $primary-color;
+    transition: transform 0.5s;
+    border-radius: $corner-rad-std;
 
-  .post-link {
-    &:visited {
-      color: $grey-color-dark;
+    &:hover {
+      transform: scale(1.05);
+      z-index: 50;
+      background-color: $secondary-color;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+      .post-link .list-item-content {
+        color: $grey-color-dark;
+      }
     }
 
-    .list-item-content {
-      display: flex;
-      flex-direction: row;
-      align-items: stretch;
-      justify-content: space-between;
+    .post-link {
+      &:visited {
 
-
-      .list-item-desc {
-        width: 75%;
-        flex-direction: column;
-        display: flex;
-        flex-grow: 1;
-        /* Make the text div grow to fill available vertical space */
-
-        padding-right: $spacing-unit;
-
-
-        .item-title {
-          font-weight: 600;
-          margin-top: 0;
-          /* Remove default margin */
-        }
-
-        .item-desc {
-          font-size: larg;
-          line-height: 95%;
-          margin-top: 0;
-          /* Remove default margin */
-          margin-bottom: 15px;
-          /* Remove default margin */
-          display: -webkit-box;
-          -webkit-line-clamp: 4;
-          /* Limit the number of lines to 4 */
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-
-        .item-meta {
-          display: flex;
-          justify-content: space-between;
-          font-size: medium;
-          margin-top: auto;
-          /* Remove default margin */
-          margin-bottom: 0;
-          /* Remove default margin */
-
-          .meta-author {
-            margin: 0 $spacing-unit;
-          }
-
-          .meta-date {
-            margin: 0 $spacing-unit;
-          }
-        }
       }
 
-      .list-item-img {
-        width: 25%;
-        height: 100%;
-        overflow: hidden;
-        margin-top: auto;
-        margin-bottom: auto;
+      .list-item-content {
+        color: $grey-color-light;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
 
-        img {
+
+        .list-item-desc {
+          width: 80%;
+          flex-direction: column;
+          display: flex;
+          flex-grow: 1;
+          /* Make the text div grow to fill available vertical space */
+
+          padding-right: $spacing-unit;
+
+
+          .item-title {
+            font-weight: 600;
+            margin-top: 0;
+            /* Remove default margin */
+          }
+
+          .item-desc {
+            font-size: larg;
+            line-height: 97.5%;
+            margin-top: 0;
+            /* Remove default margin */
+            margin-bottom: 15px;
+            /* Remove default margin */
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            /* Limit the number of lines to 4 */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .item-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: medium;
+            margin-top: auto;
+            /* Remove default margin */
+            margin-bottom: 0;
+            /* Remove default margin */
+
+            .meta-author {
+              margin: 0 $spacing-unit;
+            }
+
+            .meta-date {
+              margin: 0 $spacing-unit;
+            }
+          }
+        }
+
+        .list-item-img {
+          width: 20%;
           height: 100%;
-          width: auto;
-          object-fit: contain;
+          overflow: hidden;
+          margin-top: auto;
+          margin-bottom: auto;
+
+          img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+          }
         }
       }
     }
