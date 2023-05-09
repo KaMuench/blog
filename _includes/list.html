@@ -1,7 +1,28 @@
-{%- if page.title == "Projects" -%}
-    <ul class="list">
-        {%- for bl in site.posts -%}
-            <li>{{ bl.title }}</li>
-        {%- endfor -%}
-    </ul>
+
+{%- if include.list and include.list.size > 0 -%}
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+<ul class="list">
+    {%- for item in include.list -%}
+    <li class="list-item">
+        <a class="post-link" href="{{ item.url | relative_url }}">
+            <div class="list-item-content">
+                <div class="list-item-desc">
+                    <h3 class="item-title">{{ item.title | escape }}</h3>
+                    <p class="item-desc"> {{ item.description | escape }}</p>
+                    <div class="item-meta">
+                        <span class="meta-author"> {{item.author | default: "Kaleb Münch"}}</span>
+                        <span class="meta-date">{{ item.date | date: date_format }}</span>
+                    </div>
+                </div>
+                <div class="list-item-img">
+                    <img src="assets/img/{{ item.image_name | default: "info.png"}}" alt="{{ item.image_info | default: "Image info"}}" width="300" height="300">
+                </div>
+            </div>
+        </a>
+        {%- if site.show_excerpts -%}
+        {{ item.excerpt }}
+        {%- endif -%}
+    </li>
+    {%- endfor -%}
+</ul>
 {%- endif -%}
