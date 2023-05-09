@@ -215,10 +215,13 @@ pre {
   
 
   //Wrapper containing the content of the page 
-  & .wrapper-content {
+  .wrapper-content {
+
+    width: 100%;
     padding: $spacing-unit $spacing-unit;
     background-color: $grey-color-light;
-    min-height: 500px;
+    
+    
   }
 
   @extend %clearfix;
