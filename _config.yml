@@ -68,6 +68,8 @@ defaults:
       layout: "project"
       subtitle: ""
       title: "project"
+      image_name: "info.png"
+      image_info: "Image info"
 
 
       

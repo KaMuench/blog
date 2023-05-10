@@ -14,16 +14,15 @@
                             <span class="meta-date">{{ item.date | date: date_format }}</span>
                         </div>
                     </div>
+                    {%- if item.image_name -%}
                     <div class="list-item-img">
-                        <img src="assets/img/{{ item.image_name | default: "info.png"}}"
-                            alt="{{ item.image_info | default: " Image info"}}" width="300" height="300">
+                        <img src="assets/img/{{ item.image_name }}"
+                            alt="{{ item.image_info }}" width="300" height="300">
                     </div>
+                    {%- endif -%}
                 </div>
             </a>
         </div>
-        {%- if site.show_excerpts -%}
-        {{ item.excerpt }}
-        {%- endif -%}
     </li>
     {%- endfor -%}
 </ul>

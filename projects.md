@@ -3,4 +3,4 @@ layout: projects
 title: Projects
 ---
 
-# This site displays my projects
+### This site displays my projects

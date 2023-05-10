@@ -49,6 +49,16 @@ $on-bgrnd-dissap:   1100px !default;
   font-size: $base-font-size * $ratio;
 }
 
+@mixin add-hover-highlight() {
+  &:hover {
+    transform: scale(1.05);
+    z-index: 50;
+    background-color: $secondary-color;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+    @content;
+  }
+}
+
 // Import partials.
 @import
   "minima/layout",

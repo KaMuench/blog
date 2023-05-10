@@ -6,6 +6,9 @@
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
+  
+  z-index: 100;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
 
   // Positioning context for the mobile navigation icon
   position: sticky;
@@ -68,10 +71,12 @@
       margin-right: $spacing-unit - 5;
     }
 
-    &:hover {
-      color: black;
-      background-color: $secondary-color;
+    @include add-hover-highlight() {
       text-decoration: none;
+      color: $grey-color-dark;
+      >svg {
+        fill: $grey-color-dark;
+      }
     }
   }
 
@@ -105,9 +110,7 @@
         fill: $grey-color-light;
       }
 
-      &:hover {
-        background-color: $secondary-color;
-
+      @include add-hover-highlight() {
         >svg {
           fill: $grey-color-dark;
         }
@@ -328,34 +331,28 @@
  */
 /* #region*/
 .list {
-  margin-left: auto;
-  margin-right: auto;
+  margin: $spacing-unit auto;
   list-style-type: none;
 }
 
 .list-item {
-  margin: $spacing-unit;
+  margin: calc($spacing-unit / 2) $spacing-unit;
 
   .list-item-wrapper {
-    padding: 20px;
+    padding: 15px;
     background-color: $primary-color;
     transition: transform 0.5s;
     border-radius: $corner-rad-std;
 
-    &:hover {
-      transform: scale(1.05);
-      z-index: 50;
-      background-color: $secondary-color;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
-      .post-link .list-item-content {
+    @include add-hover-highlight() {
+            .post-link .list-item-content {
         color: $grey-color-dark;
       }
     }
 
-    .post-link {
-      &:visited {
 
-      }
+    .post-link {
+      &:visited {}
 
       .list-item-content {
         color: $grey-color-light;
@@ -376,8 +373,9 @@
 
 
           .item-title {
-            font-weight: 600;
+            font-weight: 500;
             margin-top: 0;
+            margin-bottom: 5px;
             /* Remove default margin */
           }
 
@@ -389,7 +387,7 @@
             margin-bottom: 15px;
             /* Remove default margin */
             display: -webkit-box;
-            -webkit-line-clamp: 4;
+            -webkit-line-clamp: 3;
             /* Limit the number of lines to 4 */
             -webkit-box-orient: vertical;
             overflow: hidden;
@@ -433,6 +431,66 @@
   }
 }
 
-
-
 /* #endregion*/
+
+/**
+ * Bottom Navigation
+ */
+/* #region */
+
+.bottom-navigation {
+  margin: $spacing-unit auto;
+  height: $spacing-unit;
+
+
+  .prev {
+    display: table;
+    float: left;
+    padding: 5px;
+    color: $grey-color-dark;
+    border-radius: $corner-rad-std;
+    border-color: $grey-color-dark;
+    border-style: solid;
+    border-width: 1px;
+
+    @include add-hover-highlight();
+
+    .post-link {
+      &:visited {}
+    }
+  }
+
+  .next {
+    display: table;
+    float: right;
+    padding: 5px;
+    color: $grey-color-dark;
+    border-radius: $corner-rad-std;
+    border-color: $grey-color-dark;
+    border-style: solid;
+    border-width: 1px;
+
+    @include add-hover-highlight();
+
+    .post-link {
+      &:visited {}
+    }
+  }
+}
+
+
+/* #endregion */
+
+/**
+ * Page description
+ */
+
+ /* #region */
+ .page-description {
+  .content-heading {
+    font-size: 42px;
+    letter-spacing: -1x;
+    line-height: 1;
+  }
+ }
+ /* #endregion*/

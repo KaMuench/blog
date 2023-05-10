@@ -4,7 +4,7 @@
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
       <div class="site-logo-container">
-        <a class="site-title" rel="author" href="{{ " /" | relative_url }}">
+        <a class="site-title" rel="author" href="{{ site.baseurl}}/">
           <p>MY<span>BLOG</span></p>
         </a>
       </div>
