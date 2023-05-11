@@ -56,8 +56,8 @@ plugins:
 # Collections:
 collections:
   projects:
-    output: true                                  # necessary for jekyll to generate output folder in _site and create html files for corresponding project files
-    custom_permalink_placeholders: ["subtitle"]   # add custom placeholder to permalink placeholders -> needs gem jekyll_custom_permalink', '~> 0.0'
+    output: true                                    # necessary for jekyll to generate output folder in _site and create html files for corresponding project files
+    custom_permalink_placeholders: ["subtitle"]     # add custom placeholder to permalink placeholders -> needs gem jekyll_custom_permalink', '~> 0.0'
     permalink: "/projects/:title/:year_:month_:day-:subtitle.html"
 
 #Defaults
