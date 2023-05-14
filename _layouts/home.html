@@ -4,7 +4,23 @@ layout: default
 
 <div class="home">
   {%- include page_description.html -%}
-  {{ content }}
+  <div class="profile-col">
+    <div class="profile">
+        <img class="profile-picture" src="assets/img/info.png" alt="Kaleb Münch" width="300" height="300">
+        <div class="profile-title">
+          <h2>Kaleb Münch</h2>
+          <h3>Bachleors Student for Computer Science</h3>
+        </div>
+        <ul class="network-icon">
+          <li><a href=""></a></li>
+        </ul>
+    </div>
+  </div>
+  <div class="content-col">
+    <div class="content">
+      {{ content }}
+    </div>
+  </div>
 
   <div class="exhibit-wrapper">
     <h2>Some Blog Posts</h3>
