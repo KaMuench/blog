@@ -4,6 +4,6 @@
 
 layout: home
 title: Home
-description: "This is the start page"
 ---
 
+# Hey its me !

@@ -6,7 +6,7 @@
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
-  
+
   z-index: 100;
   box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
 
@@ -74,6 +74,7 @@
     @include add-hover-highlight() {
       text-decoration: none;
       color: $grey-color-dark;
+
       >svg {
         fill: $grey-color-dark;
       }
@@ -345,7 +346,7 @@
     border-radius: $corner-rad-std;
 
     @include add-hover-highlight() {
-            .post-link .list-item-content {
+      .post-link .list-item-content {
         color: $grey-color-dark;
       }
     }
@@ -485,12 +486,102 @@
  * Page description
  */
 
- /* #region */
- .page-description {
+/* #region */
+.page-description {
   .content-heading {
     font-size: 42px;
     letter-spacing: -1x;
     line-height: 1;
   }
- }
- /* #endregion*/
+}
+
+/* #endregion*/
+
+/**
+ * Home 
+ */
+
+/* #region*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+
+  .profile-col {
+    flex: 0 0 calc(100% / 3);
+    max-width: calc(100% / 3);
+    padding: 0 15px;
+
+
+    .profile {
+      padding: $spacing-unit 15px;
+      text-align: center;
+      position: relative;
+
+      .profile-picture {
+        border-radius: 50%;
+      }
+
+      img {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        max-width: 270px;
+        max-height: 270px;
+        object-fit: contain;
+      }
+
+      h2 {
+        font-size: 1.75em;
+        margin: 20px 0 10px;
+      }
+
+      h3 {
+        font-size: 1em;
+        margin: 0 0 10px;
+      }
+
+      .network-icon {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          border-radius: 50%;
+          width: 56px;
+          padding: 5px;
+          margin: 5px;
+
+          svg {
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+          }
+
+          @include add-hover-highlight();
+        }
+      }
+    }
+
+    .content-col {
+      flex: 0 0 calc((100% / 3) * 2);
+      max-width: calc((100% / 3) * 2);
+      padding: 0 15px;
+    }
+  }
+
+  @include media-query($on-laptop) {
+    .col {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+}
+
+/* #endregion*/
