@@ -369,19 +369,15 @@
           display: flex;
           flex-grow: 1;
           /* Make the text div grow to fill available vertical space */
-
           padding-right: $spacing-unit;
 
-
           .item-title {
-            font-weight: 500;
             margin-top: 0;
             margin-bottom: 5px;
-            /* Remove default margin */
+
           }
 
           .item-desc {
-            font-size: larg;
             line-height: 97.5%;
             margin-top: 0;
             /* Remove default margin */
@@ -398,11 +394,11 @@
           .item-meta {
             display: flex;
             justify-content: space-between;
-            font-size: medium;
             margin-top: auto;
             /* Remove default margin */
             margin-bottom: 0;
-            /* Remove default margin */
+
+            font-size: 0.7em;
 
             .meta-author {
               margin: 0 $spacing-unit;
@@ -489,7 +485,6 @@
 /* #region */
 .page-description {
   .content-heading {
-    font-size: 42px;
     letter-spacing: -1x;
     line-height: 1;
   }
@@ -511,7 +506,7 @@
   .profile-col {
     flex: 0 0 calc(100% / 3);
     max-width: calc(100% / 3);
-    padding: 0 15px;
+    padding: 0 0px;
 
 
     .profile {
@@ -533,12 +528,12 @@
       }
 
       h2 {
-        font-size: 1.75em;
+        font-size: 2em;
         margin: 20px 0 10px;
       }
 
       h3 {
-        font-size: 1em;
+
         margin: 0 0 10px;
       }
 
@@ -553,14 +548,14 @@
 
         li {
           border-radius: 50%;
-          width: 56px;
+          width: 46px;
           padding: 5px;
           margin: 5px;
 
           svg {
             font-size: 2rem;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
           }
 
           @include add-hover-highlight();
@@ -568,11 +563,13 @@
       }
     }
 
-    .content-col {
-      flex: 0 0 calc((100% / 3) * 2);
-      max-width: calc((100% / 3) * 2);
-      padding: 0 15px;
-    }
+
+  }
+
+  .content-col {
+    flex: 0 0 calc((100% / 3) * 2);
+    max-width: calc((100% / 3) * 2);
+    padding: 0 0px;
   }
 
   @include media-query($on-laptop) {
@@ -582,6 +579,51 @@
     }
   }
 
+  .table {
+    display: flex;
+    flex-direction: wrap;
+    
+    & > div {
+      flex: 50%;
+    }
+
+    .table-wrapper {
+      padding: 0 15px;
+
+      h2 {
+        font-weight: 500;
+      }
+      li {
+        font-size: 1.4em;
+      }
+    }
+  }
+
+}
+
+.exhibit-wrapper {
+  margin: $spacing-unit 0 ;
+}
+
+/* #endregion*/
+
+/**
+ * Content
+ */
+
+/* #region */
+
+.content {
+  padding: 0 15px;
+  p {
+    font-size: 1.65em;
+    line-height: 110%;
+  }
+
+  a {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 
 /* #endregion*/

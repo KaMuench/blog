@@ -7,7 +7,7 @@
             <a class="post-link" href="{{ item.url | relative_url }}">
                 <div class="list-item-content">
                     <div class="list-item-desc">
-                        <h3 class="item-title">{{ item.title | escape }}</h3>
+                        <h2 class="item-title">{{ item.title | escape }}</h2>
                         <p class="item-desc"> {{ item.description | escape }}</p>
                         <div class="item-meta">
                             <span class="meta-author"> {{item.author | default: "Kaleb Münch"}}</span>
