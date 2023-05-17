@@ -9,4 +9,4 @@ description: >
 
 ---
 
-# Page 3
+# {{ page.title }}

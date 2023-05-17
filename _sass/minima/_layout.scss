@@ -608,6 +608,40 @@
 /* #endregion*/
 
 /**
+ * Project
+ */
+/* #region */
+.project-navigation .list-navigation {
+  border-color: $grey-color-dark;
+  border-radius: $corner-rad-std;
+  border-width: 1px;
+  border-style: solid;
+  padding: 15px;
+
+  .nav-list {
+    list-style-type: none;
+    margin: 0;
+    li {
+      font-size: 1.2em;
+      margin: 5px;
+    }
+
+    a {
+      border-radius: $corner-rad-std;
+      padding: 2.5px 5px;
+    }
+
+    #current {
+      border-color: $secondary-color;
+      border-width: 2px;
+      border-style: solid;
+    }
+    
+  }
+}
+/* #endregion*/
+
+/**
  * Content
  */
 

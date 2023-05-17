@@ -11,4 +11,4 @@ description: >
 
 ---
 
-# Some content
+# {{ page.title }}

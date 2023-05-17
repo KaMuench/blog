@@ -9,4 +9,4 @@ description: >
 
 ---
 
-# Some mooooooooore content
+# {{ page.title }}

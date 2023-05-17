@@ -5,13 +5,15 @@ layout: default
 
 <div class="project-container">
     <h1>{{ page.categories[0] }}</h1>
-    <h2>{{ page.title }}</h2>
     <div class="project-navigation">
         <div class="list-navigation">
             <ul class="nav-list">
                 {%- assign list = site.projects | where_exp: "item", "item.categories[0] == page.categories[0]" -%}
                 {%- for item in list -%}
-                <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+                <li><a href="{{ item.url | relative_url }}"
+                    {%- if item.title == page.title -%}
+                    id="current"
+                    {%- endif-%}>{{ item.title }}</a></li>
                 {%- endfor-%}
             </ul>
         </div>
