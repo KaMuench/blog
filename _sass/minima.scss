@@ -51,7 +51,7 @@ $on-bgrnd-dissap:   1100px !default;
 
 @mixin add-hover-highlight() {
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.025);
     z-index: 50;
     background-color: $secondary-color;
     box-shadow: 0 5px 25px rgba(0, 0, 0, .2);

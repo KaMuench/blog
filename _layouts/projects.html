@@ -5,4 +5,5 @@ layout: default
 {%- include page_description.html -%}
 {{ content }}
 
-{%- include list.html list = site.projects -%}
+{%- assign list = site.projects | where: "start", true -%}
+{%- include list.html list = list -%}

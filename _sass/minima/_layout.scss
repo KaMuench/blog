@@ -162,6 +162,7 @@
 /* #endregion*/
 
 
+
 /**
  * Site footer
  */
@@ -171,6 +172,7 @@
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+  background-color: $primary-color;
 }
 
 .footer-heading {
@@ -182,6 +184,9 @@
 .social-media-list {
   list-style: none;
   margin-left: 0;
+  svg {
+    fill: black;
+  }
 }
 
 .footer-col-wrapper {
@@ -189,6 +194,7 @@
   color: $grey-color;
   margin-left: - calc($spacing-unit / 2);
   @extend %clearfix;
+  color: whitesmoke;
 }
 
 .footer-col {
@@ -497,7 +503,7 @@
  */
 
 /* #region*/
-.container {
+.home-container {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -605,6 +611,44 @@
   margin: $spacing-unit 0 ;
 }
 
+/* #endregion*/
+
+/**
+ * Project
+ */
+/* #region */
+.project-navigation .list-navigation {
+  border-color: $grey-color-dark;
+  border-radius: $corner-rad-std;
+  border-width: 1px;
+  border-style: solid;
+  padding: 15px;
+
+  .nav-list {
+    list-style-type: none;
+    margin: 0;
+    li {
+      font-size: 1.2em;
+      margin: 5px;
+      border-radius: $corner-rad-std;
+      padding: 2.5px 5px;
+
+      @include add-hover-highlight;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+    }
+
+    #current {
+      border-color: $grey-color $grey-color-light;
+      border-width: 1px;
+      border-style: solid;
+    }
+    
+  }
+}
 /* #endregion*/
 
 /**

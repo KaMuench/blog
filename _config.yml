@@ -29,6 +29,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  KaMuench
+author: "Kaleb Münch"
 
 # Build settings
 theme: minima
@@ -59,8 +60,8 @@ plugins:
 collections:
   projects:
     output: true                                    # necessary for jekyll to generate output folder in _site and create html files for corresponding project files
-    custom_permalink_placeholders: ["subtitle"]     # add custom placeholder to permalink placeholders -> needs gem jekyll_custom_permalink', '~> 0.0'
-    permalink: "/projects/:title/:year_:month_:day-:subtitle.html"
+    # custom_permalink_placeholders: ["subtitle"]     # add custom placeholder to permalink placeholders -> needs gem jekyll_custom_permalink', '~> 0.0'
+    permalink: "/projects/:slugified_categories/:day-:month-:year_:slug.html"
 
 #Defaults
 defaults:
@@ -69,7 +70,6 @@ defaults:
     values:
       layout: "project"
       subtitle: ""
-      title: "project"
       image_name: "info.png"
       image_info: "Image info"
 
