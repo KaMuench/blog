@@ -1,7 +1,5 @@
 ---
 layout: project
-
-
 title: "First part"
 start: true
 categories: [Test]

@@ -1,6 +1,6 @@
 ---
 layout: projects
 title: Projects
+description: >
+ Here is an overview of all my projects. 
 ---
-
-### This site displays my projects
