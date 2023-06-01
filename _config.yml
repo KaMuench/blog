@@ -71,6 +71,10 @@ defaults:
       layout: "project"
       image_name: "info.png"
       image_info: "Image info"
+  - scope:
+      path: "_posts"
+    values:
+      author: "Kaleb Münch"
 
 
       
