@@ -249,9 +249,14 @@
 /* #region*/
 .page-content {
   flex: 1;
-
+  background-image: url(/blog/assets/img/foreground_rendered_bloom.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: cover;
+  background-size: 100% auto;
   @include media-query($on-bgrnd-dissap) {
-    background-color: $grey-color-light;
+    background-color: $background-color-main;
+    background-image: none;
   }
 }
 

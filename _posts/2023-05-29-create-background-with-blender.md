@@ -17,6 +17,9 @@ With Blender installed now, we can dive right into it.
 
 
 ## Create the foreground
+
+For the foreground part I used the tutorial of [Blender Made Easy - How to Make a cool Blender Wallpaper](https://www.youtube.com/watch?v=Z_kAzpmgNN8&ab_channel=BlenderMadeEasy). You can follow the tutorial on youtube or here.  
+
 The first thing we have to do is to create our hexagon. For this we add a cylinder `Shift + A -> Mesh -> Cylinder`and change the number of verticies to 6.  
 
 <div class="image-with-description-right ">
@@ -36,7 +39,7 @@ The first thing we have to do is to create our hexagon. For this we add a cylind
 
 You should by now have a row of multiple hexagones lined up next to each other. Click the `Apply` button in the array modifier panel to apply the array modifier. Now our object is made of a row with several hexagons.
 
-![hexagon row]({{site.baseurl}}/assets/img/{{ page.date | date: "%Y-%m-%d"}}-{{page.title | slugify }}/hexagon_row.png){: height="400"}
+![hexagon row]({{site.baseurl}}/assets/img/{{ page.date | date: "%Y-%m-%d"}}-{{page.title | slugify }}/hexagon_row.png){: style="height:400px; display:block; margin-left:auto; margin-right:auto"}
 
 Again we want to duplicate this row. To do that select the row and press `Shift + D` . Now position the duplicated row on top of the other row but with a little offset to the right. So the corners of the hexagons of the first row go between the corners of the second. You can adjust the distance between the two rows by selecting the second row and select the `Object Properties` panel which has the little orange square symbol. There you can adjust the X and Y location so that the distances between the hexagons are rougly the same.  
 
@@ -55,12 +58,12 @@ Now we copy these two rows again by selecting everything and pressing `Shift + D
     </p>
 </div>
 
-We are almost done with the foreground. 
+
 
 <div class="image-with-description-left ">
     <img src="{{site.baseurl}}/assets/img/{{ page.date | date: "%Y-%m-%d"}}-{{page.title | slugify }}/edit_mode.png" height="200">
     <p>
-        Select all rows which should be just a left click somwhere in the hexagon rectangle. Switch to <code class="language-plaintext highlight-rouge">Edit Mode</code> by clicking on the drop dow menu at the top left corner. Now press <code class="language-plaintext highlight-rouge">p</code> and select <code class="language-plaintext highlight-rouge">By loose parts</code>. This can take a view seconds. Switch back to  <code class="language-plaintext highlight-rouge">Object Mode</code>. You should now have all the hexagons as single objects in the project tree. The select all the hexagons do a right click and select  <code class="language-plaintext highlight-rouge">Set Origin -> Origin to Geometrie</code> . This might also take some time. 
+        After that select all rows which should be just a left click somwhere in the hexagon rectangle. Switch to <code class="language-plaintext highlight-rouge">Edit Mode</code> by clicking on the drop dow menu at the top left corner. Now press <code class="language-plaintext highlight-rouge">p</code> and select <code class="language-plaintext highlight-rouge">By loose parts</code>. This can take a view seconds. Switch back to  <code class="language-plaintext highlight-rouge">Object Mode</code>. You should now have all the hexagons as single objects in the project tree. The select all the hexagons do a right click and select  <code class="language-plaintext highlight-rouge">Set Origin -> Origin to Geometrie</code> . This might also take some time. 
     </p>
 </div>
 
@@ -70,6 +73,46 @@ To finish the foreground we select one hexagone and press `o` to turn on `Propor
 <div class="image-with-description-right ">
     <img src="{{site.baseurl}}/assets/img/{{ page.date | date: "%Y-%m-%d"}}-{{page.title | slugify }}/move.png" height="200">
     <p>
-        For the <code class="language-plaintext highlight-rouge">Proportional Falloff</code> select <code class="language-plaintext highlight-rouge">Random</code> and change the number for <code class="language-plaintext highlight-rouge">Proportional Size</code> to something like 8.0. After that again select on of the hexagons and move it upwards. The sorounding hexagons should move now as well. You can move several of the hexagons depending on what you find appealing.
+        For the <code class="language-plaintext highlight-rouge">Proportional Falloff</code> select <code class="language-plaintext highlight-rouge">Random</code> and change the number for <code class="language-plaintext highlight-rouge">Proportional Size</code> to something like 8.0. After that again select on of the hexagons and move it upwards. The sorounding hexagons should now move as well. You can move several of the hexagons depending on what you find appealing.
     </p>
 </div>
+
+The whole thing should by now look similar to this.
+
+![hexagon distance]({{site.baseurl}}/assets/img/{{ page.date | date: "%Y-%m-%d"}}-{{page.title | slugify }}/after_propotional_editing_1.png){: height="300" style="margin-right: 30px;"}
+![hexagon distance]({{site.baseurl}}/assets/img/{{ page.date | date: "%Y-%m-%d"}}-{{page.title | slugify }}/after_propotional_editing_2.png){: height="300"}
+
+Now we have to do some configurations for the rendering. I changed the lamp to `Sun` and reduced the `Strengh` a little by clicking at the lamp object and selecting the  lightbulb 💡 from the toolbar to the right bottom corner, which is the `Object Data Properties` panel. The sun mode lets the lamp act like the sun on earth would do. The light rays go in on direction. You can adjust the position of your sun and the direction of the rays to your liking. I choose the top right corner. 
+
+<div class="image-with-description-left ">
+    <img src="{{site.baseurl}}/assets/img/{{ page.date | date: "%Y-%m-%d"}}-{{page.title | slugify }}/rendering.png" height="100">
+    <p>
+        To see the outcome of your adjustments switch the <code class="language-plaintext highlight-rouge">Viewport Shading</code> to <code class="language-plaintext highlight-rouge">Rendered</code>. This is done by clicking at the outer right circle in the top right toolbar. This switches to the realtime render mode. Now you should be able to see the shadows your light is producing. 
+    </p>
+</div>
+
+<div class="image-with-description-right ">
+    <img src="{{site.baseurl}}/assets/img/{{ page.date | date: "%Y-%m-%d"}}-{{page.title | slugify }}/rendering_mode.png" height="100">
+    <p>
+        While this might already look quite good, we will change the render mode to <code class="language-plaintext highlight-rouge">Cycles</code>. Since this mode produces smoother shadows. Click at the <code class="language-plaintext highlight-rouge">Render Properties</code> which is the camera symbol in the toolbar on the right. In the panel you can change in the <code class="language-plaintext highlight-rouge">Render Engine</code> drop down menu to <code class="language-plaintext highlight-rouge">Cycles</code>. No the rendering always takes a little bit and you can follow the process as the image sharpens more and more.
+    </p>
+</div>
+
+<div class="image-with-description-left ">
+    <img src="{{site.baseurl}}/assets/img/{{ page.date | date: "%Y-%m-%d"}}-{{page.title | slugify }}/material.png" height="300">
+    <p>
+        The last thing we have to do for the foreground is to add a material to the hexagons. We do that by selecting one hexagon switching to the <code class="language-plaintext highlight-rouge">Material Properties</code> which should have a red circle as an icon. In the panel we add a new material by hitting the <code class="language-plaintext highlight-rouge">New</code> Button. In the panel do the same configurations as I did in the image. Basically we set the <code class="language-plaintext highlight-rouge">Surface</code> to <code class="language-plaintext highlight-rouge">Mix Shader</code> and add the <code class="language-plaintext highlight-rouge">Defuse BSDF</code> and <code class="language-plaintext highlight-rouge">Glossy BSDF</code> shader. To apply the material to all the hexagons select all hexagons, press <code class="language-plaintext highlight-rouge">Shift</code> and left click the hexagon with the material applied and press <code class="language-plaintext highlight-rouge">Ctrl + L</code> then select <code class="language-plaintext highlight-rouge">Materials</code> in the pop up menu. Now all the hexagons should have this material. You can check that by clicking on another hexagon and check the <code class="language-plaintext highlight-rouge">Material Properties</code> where there should be the earlier created material. <br>
+        Now let's render an image of the whole foreground by clicking on the <code class="language-plaintext highlight-rouge">Render</code> at the top menu next to the <code class="language-plaintext highlight-rouge">File</code> and <code class="language-plaintext highlight-rouge">Edit</code> button. 
+    </p>
+</div>
+
+This should open a new window where you can follow the render process. If the image produces is noisy you can increase the `Samples` in the `Render Properties` panel which should right now have a default of 128. The result should now look similar to this.
+
+![rendered image]({{site.baseurl}}/assets/img/{{ page.date | date: "%Y-%m-%d"}}-{{page.title | slugify }}/rendered_image.png){: style="display:block; margin-left:auto; margin-right:auto; height:500px"}
+
+Great! You have finished the foreground so far. Take a second a pat yourself on the back.   
+---
+
+## The background
+
+The foreground itself already looks quite good. We could stop here and use this as our new wallpaper. But I want something a little darker. To have a better contrast. Let us continue with the background to get a little bit more color.
