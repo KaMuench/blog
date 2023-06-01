@@ -28,7 +28,8 @@ layout: default
     {% endif %}
   </div>
   <div class="exibit-wrapper">
-    {%- include list.html list = site.posts -%}
+    {%- assign liste = site.posts | where_exp: "item", "item.title != page.title" -%}
+    {%- include list.html list = liste -%}
   </div>
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}

@@ -61,7 +61,7 @@ collections:
   projects:
     output: true                                    # necessary for jekyll to generate output folder in _site and create html files for corresponding project files
     # custom_permalink_placeholders: ["subtitle"]     # add custom placeholder to permalink placeholders -> needs gem jekyll_custom_permalink', '~> 0.0'
-    permalink: "/projects/:slugified_categories/:day-:month-:year_:slug.html"
+    permalink: "/projects/:slugified_categories/:year-:month-:day_:slug.html"
 
 #Defaults
 defaults:
@@ -69,9 +69,12 @@ defaults:
       path: "_projects"
     values:
       layout: "project"
-      subtitle: ""
       image_name: "info.png"
       image_info: "Image info"
+  - scope:
+      path: "_posts"
+    values:
+      author: "Kaleb Münch"
 
 
       
