@@ -221,9 +221,7 @@ pre {
   .wrapper-content {
     
     padding: $spacing-unit $spacing-unit;
-    background-color: $grey-color-light;
-    
-    
+    background-color: $background-color-main;
   }
 
   @extend %clearfix;
