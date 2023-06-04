@@ -38,10 +38,10 @@ layout: default
     </div>
   </div>
   <div class="exhibit-wrapper">
-    <h2>Some Blog Posts</h3>
-      {%- include list.html list = site.posts -%}
-      <h2>Some Projects</h3>
-        {%- assign list = site.projects | where: "start", true -%}
-        {%- include list.html list = list -%} 
+    <h2>Some Blog Posts</h2>
+    {%- include list.html list = site.posts -%}
+    <h2>Some Projects</h2>
+    {%- assign list = site.projects | where: "start", true -%}
+    {%- include list.html list = list -%}
   </div>
 </div>
