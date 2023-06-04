@@ -25,6 +25,7 @@ Hello, my name is Kaleb. Currently I am a bachelor student of computer science a
         <div class="table-wrapper">
             <h2>Education</h2>
     	    <ul class="education">
+                <li>BA of Computer Science</li>
             </ul>    
         </div>
     </div>
