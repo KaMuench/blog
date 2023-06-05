@@ -365,10 +365,16 @@
 .list {
   margin: $spacing-unit auto;
   list-style-type: none;
+
 }
 
 .list-item {
   margin: calc($spacing-unit / 2) $spacing-unit;
+
+  @include media-query($on-palm) {
+    margin: calc($spacing-unit / 2) 0;
+  }
+
 
   .list-item-wrapper {
     padding: 15px;

@@ -221,6 +221,10 @@ pre {
   .wrapper-content {
     padding: $spacing-unit $spacing-unit;
     background-color: $background-color;
+
+    @include media-query($on-palm) {
+      padding: 15px;
+    }
   }
 
   @extend %clearfix;
