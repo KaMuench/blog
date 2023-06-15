@@ -7,7 +7,9 @@ title: Home
 ---
 
 # Biography
-Hello, my name is Kaleb. Currently I am a bachelor student of computer science at the [Hochschule für Technik in Stuttgart](https://www.hft-stuttgart.de/). My experience mainly consists of Java programming, building apps with Android Studio and some hobby tinkering with Arduino. 
+Hello, my name is Kaleb. Currently I am a bachelor student of computer science at the [Hochschule für Technik in Stuttgart](https://www.hft-stuttgart.de/). My experience mainly consists of Java programming, building apps with Android Studio and some hobby tinkering with Arduino.  
+
+This website gives an insight into some of my smaller and larger projects. I hope that some people will be interested and maybe inspired to try something themselves.
 
 
 <div class="table">
