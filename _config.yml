@@ -30,6 +30,7 @@ baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  KaMuench
 stackoverflow_username: KaMuench 19577820
+linkedin_username: Kaleb Münch
 author: "Kaleb Münch"
 
 # Build settings
