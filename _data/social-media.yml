@@ -1,0 +1,19 @@
+
+github:
+  id: 'KaMuench'
+  href: 'https://github.com/KaMuench'
+  title: 'GitHub'
+  fa-icon: 'assets/minima-social-icons.svg#github'
+
+stackoverflow:
+  id: 'KaMuench'
+  href: 'https://stackoverflow.com/users/19577820/kamuench'
+  title: 'Stackoverflow'
+  fa-icon: 'assets/minima-social-icons.svg#stackoverflow'
+
+linkedin:
+  id: 'Kaleb Münch'
+  href: 'https://www.linkedin.com/in/kaleb-m%C3%BCnch-69a077294/'
+  title: 'LinkedIn'
+  fa-icon: 'assets/minima-social-icons.svg#linkedin'
+
